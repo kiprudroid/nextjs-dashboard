@@ -102,10 +102,10 @@ async function seedRevenue() {
 }
 
 export async function GET() {
-  // return Response.json({
-  //   message:
-  //     'Seeding database. This may take a few minutes. Please do not refresh the page.',
-  // });
+  return Response.json({
+    message:
+      'Seeding database. This may take a few minutes. Please do not refresh the page.',
+  });
   try {
     await client.sql`BEGIN`;
     await seedUsers();
